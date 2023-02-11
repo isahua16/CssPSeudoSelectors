@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#page_header {
+  min-height: 10vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+#menu_icon {
+  width: 60px;
+  height: 60px;
+}
+
+#menu_icon:hover {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+#product {
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+
+#product_img {
+  width: 50%;
+}
+
+#product_img:hover {
+  width: 100%;
+}
+
+#product_img:active {
+  width: 50%;
+}
