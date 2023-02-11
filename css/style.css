@@ -12,15 +12,26 @@
   grid-template-columns: 1fr 1fr;
 }
 
+#page_header > h1 {
+  animation: logo linear 2s infinite alternate;
+}
+
+@keyframes logo {
+  100% {
+    transform: translateX(50vw);
+  }
+}
+
+@keyframes menu {
+  100% {
+    transform: translateX(100%) rotate(180deg);
+  }
+}
+
 #menu_icon {
   width: 60px;
   height: 60px;
-}
-
-#menu_icon:hover {
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
+  animation: menu linear 2s infinite alternate;
 }
 
 main {
@@ -50,28 +61,22 @@ main {
   background-color: #ff8811;
   color: #fff8f0;
   width: 150px;
-  height: 35px;
   display: grid;
   grid-auto-flow: column;
   padding: 10px 20px;
   text-decoration: none;
   transition: transform ease-in-out 1s;
-  position: relative;
 }
 
 #buy_btn > p {
   transition: all ease-in-out 1s;
-  position: absolute;
-  left: 45px;
+  transform: translateX(30%);
 }
 
 #arrow {
   fill: #fff8f0;
-  transition: all ease-in-out 1s;
-  transform: scale(0);
-  position: absolute;
-  top: 6px;
-  right: 20px;
+  transform: scale(0%) translateX(-10%);
+  transition: transform ease-in-out 1s;
 }
 
 #buy_btn:hover {
@@ -79,10 +84,9 @@ main {
 }
 
 #buy_btn:hover > #arrow {
-  transform: scale(1);
-  right: 15px;
+  transform: scale(100%) translateX(30%);
 }
 
 #buy_btn:hover > p {
-  left: 30px;
+  transform: translateX(10%);
 }
